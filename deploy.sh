@@ -3,7 +3,7 @@
 
 #需要配置如下参数
 # 项目路径, 在Execute Shell中配置项目路径, pwd 就可以获得该项目路径
-export PROJ_PATH=/home/workspace
+export PROJ_PATH=/root/jenkins
 
 # 输入你的环境上tomcat的全路径
 export TOMCAT_APP_PATH=/usr/local/tomcat8-test
@@ -11,7 +11,7 @@ export TOMCAT_APP_PATH=/usr/local/tomcat8-test
 ### base 函数
 killTomcat()
 {
-    pid=`ps -ef|grep tomcat|grep java|awk '{print $2}'`
+    pid=`ps -ef|grep tomcat8-test|grep java|awk '{print $2}'`
     echo "tomcat Id list :$pid"
     if [ "$pid" = "" ]
     then
